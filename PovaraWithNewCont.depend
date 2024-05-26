@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1715838089 source:d:\codeblocks\programs\secondsemestr\povara\main.cpp
+	<iostream>
+	<vector>
+	"povara.h"
+
+1714134370 d:\codeblocks\programs\secondsemestr\povara\povara.h
+	<string>
+	<list>
+	"Patterns.h"
+
+1714113386 source:d:\codeblocks\programs\secondsemestr\povara\povara.cpp
+	<iostream>
+	"povara.h"
+
+1714061067 d:\codeblocks\programs\secondsemestr\povara\patterns.h
+
+1716710321 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\main.cpp
+	<iostream>
+	<vector>
+	"povara.h"
+
+1716709813 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povara.h
+	<string>
+	<list>
+	"Patterns.h"
+	"sqlite3.h"
+
+1716709055 d:\codeblocks\programs\secondsemestr\povarawithnewcont\patterns.h
+
+1710242588 d:\codeblocks\programs\secondsemestr\povarawithnewcont\sqlite3.h
+	<stdarg.h>
+
+1716556959 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithnewcont.cpp
+	<iostream>
+	"povara.h"
+
