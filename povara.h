@@ -29,15 +29,14 @@ class ActionOfCooker
 {
 protected:
      bool Cooking;
-     int Skill;
      string Sex;
      string Post;
      bool WearingGlasses;
      bool ColorOfClothes;
      RaceCooker Race;
-
      ActionOfCooker();
 public:
+    int Skill;
     bool ColClothes() const {return ColorOfClothes;}
     bool WearGlasses() const {return WearingGlasses;}
     virtual ~ActionOfCooker() {};
@@ -58,10 +57,10 @@ class Mouse: public ActionOfCooker
 private:
     bool VacSleep;
     bool Cooking;
-    int Skill;
     string Sex;
     string Post;
 public:
+    int Skill;
     Mouse();
     virtual ~Mouse() {};
     void CookON() {wcout << L"Ушел готовить пасту" << endl; Cooking = true;} // готовит пасту
@@ -77,10 +76,10 @@ class Cat: public ActionOfCooker
 private:
     bool VacKan;
     bool Cooking;
-    int Skill;
     string Sex;
     string Post;
 public:
+    int Skill;
     Cat();
     virtual ~Cat() {};
     void CookON() {wcout << L"Ушел готовить суши" << endl; Cooking = true;} // готовит суши
@@ -96,10 +95,10 @@ class Robot: public ActionOfCooker
 private:
     bool VacFam;
     bool Cooking;
-    int Skill;
     string Sex;
     string Post;
 public:
+    int Skill;
     Robot();
     virtual ~Robot() {};
     void CookON() {wcout << L"Ушел готовить десерт" << endl; Cooking = true;} // готовит карамель
@@ -115,10 +114,10 @@ class WheelchairUser: public ActionOfCooker
 private:
     bool VacKuba;
     bool Cooking;
-    int Skill;
     string Sex;
     string Post;
 public:
+    int Skill;
     WheelchairUser();
     virtual ~WheelchairUser() {};
     void CookON() {wcout << L"Ушла готовить котлету" << endl; Cooking = true;} // готовит котлету
@@ -231,6 +230,8 @@ public:
 	void AddCooker(CookerPtr newCooker);
 	void AddItem(const CookerPtr &item) {AddCooker(item);}
 	int GetCount() const;
+	CookerBD();
+	virtual ~CookerBD();
 
 	Iterator<CookerPtr>* GetIterator()
 	{

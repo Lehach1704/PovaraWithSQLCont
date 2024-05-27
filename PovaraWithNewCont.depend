@@ -35,3 +35,94 @@
 	<iostream>
 	"povara.h"
 
+1716556959 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\povarawithnewcont.cpp
+	<iostream>
+	"povara.h"
+
+1716812041 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\povara.h
+	<string>
+	<list>
+	"Patterns.h"
+	"sqlite3.h"
+
+1716709055 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\patterns.h
+
+1710242588 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\sqlite3.h
+	<stdarg.h>
+
+1716823012 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\main.cpp
+	<iostream>
+	<vector>
+	"povara.h"
+	"FunctionBD.h"
+	"sqlite3.h"
+
+1716824271 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\functionbd.h
+	<string>
+	<iostream>
+	"povara.h"
+	"sqlite3.h"
+
+1710242588 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\sqlite3.c
+	<vxWorks.h>
+	<pthread.h>
+	"mingw.h"
+	"_mingw.h"
+	<stdarg.h>
+	"sqlite_cfg.h"
+	<stdint.h>
+	<inttypes.h>
+	<intrin.h>
+	<cmnintrin.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stddef.h>
+	<TargetConditionals.h>
+	<ctype.h>
+	<time.h>
+	<sys/sysctl.h>
+	<malloc/malloc.h>
+	<libkern/OSAtomic.h>
+	<malloc.h>
+	<pthread.h>
+	"windows.h"
+	<sys/cygwin.h>
+	<errno.h>
+	<process.h>
+	<math.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<sys/time.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<sys/time.h>
+	<errno.h>
+	<sys/mman.h>
+	<sys/file.h>
+	<sys/param.h>
+	<semaphore.h>
+	<limits.h>
+	<sys/mount.h>
+	<utime.h>
+	<sys/dcmd_blk.h>
+	<sys/statvfs.h>
+	<dlfcn.h>
+	<Windows.h>
+	"sqlite_tcl.h"
+	"tcl.h"
+	"sqlite3rtree.h"
+	<ctype.h>
+	<unicode/utypes.h>
+	<unicode/uregex.h>
+	<unicode/ustring.h>
+	<unicode/ucol.h>
+	<unicode/ubrk.h>
+	<unicode/utf16.h>
+	<math.h>
+

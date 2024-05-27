@@ -4,6 +4,8 @@
 using namespace std;
 
 #include "povara.h"
+#include "FunctionBD.h"
+#include "sqlite3.h"
 
 ActionOfCooker::ActionOfCooker()
 {
@@ -176,6 +178,8 @@ int main()
     cin >> a;
     //CookerContainer cookerBox(a); // создание a поваров (циклом for, повара помещаются в 1-й контейнер)
     //CookerContainerV2 cookerBox; // создание поваров (циклом for, повара помещаются во 2-й контейнер)
+    CookerBD cookerBox;
+
     for(int i=0; i<a; i++)
     {
         cookerBox.AddCooker(CreateCookerType(Cooker(rand() % 4)));
