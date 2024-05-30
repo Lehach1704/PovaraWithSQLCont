@@ -39,7 +39,7 @@
 	<iostream>
 	"povara.h"
 
-1717044130 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\povara.h
+1717053476 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\povara.h
 	<string>
 	<list>
 	"Patterns.h"
@@ -131,7 +131,7 @@
 	"povara.h"
 	"sqlite3.h"
 
-1717043706 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\bdbdbd.cpp
+1717045986 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\bdbdbd.cpp
 	<string>
 	<iostream>
 	"povara.h"

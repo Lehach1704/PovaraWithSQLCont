@@ -62,7 +62,12 @@ private:
     string Post;
 public:
     int Skill;
-    Mouse(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker() {Type=type; Race = race; ColorOfClothes = colorOfClothes; WearingGlasses = wearingGlasses;}
+    Mouse(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker()
+    {
+        Type=type; Race = race;
+        ColorOfClothes = colorOfClothes;
+        WearingGlasses = wearingGlasses;
+    }
     Mouse();
     virtual ~Mouse() {};
     void CookON() {wcout << L"Ушел готовить пасту" << endl; Cooking = true;} // готовит пасту
@@ -82,7 +87,12 @@ private:
     string Post;
 public:
     int Skill;
-    Cat(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker() {Type=type; Race = race; ColorOfClothes = colorOfClothes; WearingGlasses = wearingGlasses;}
+    Cat(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker()
+    {
+        Type=type; Race = race;
+        ColorOfClothes = colorOfClothes;
+        WearingGlasses = wearingGlasses;
+    }
     Cat();
     virtual ~Cat() {};
     void CookON() {wcout << L"Ушел готовить суши" << endl; Cooking = true;} // готовит суши
@@ -102,7 +112,12 @@ private:
     string Post;
 public:
     int Skill;
-    Robot(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker() {Type=type; Race = race; ColorOfClothes = colorOfClothes; WearingGlasses = wearingGlasses;}
+    Robot(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker()
+    {
+        Type=type; Race = race;
+        ColorOfClothes = colorOfClothes;
+        WearingGlasses = wearingGlasses;
+    }
     Robot();
     virtual ~Robot() {};
     void CookON() {wcout << L"Ушел готовить десерт" << endl; Cooking = true;} // готовит карамель
@@ -122,7 +137,12 @@ private:
     string Post;
 public:
     int Skill;
-    WheelchairUser(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker() {Type=type; Race = race; ColorOfClothes = colorOfClothes; WearingGlasses = wearingGlasses;}
+    WheelchairUser(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker()
+    {
+        Type=type; Race = race;
+        ColorOfClothes = colorOfClothes;
+        WearingGlasses = wearingGlasses;
+    }
     WheelchairUser();
     virtual ~WheelchairUser() {};
     void CookON() {wcout << L"Ушла готовить котлету" << endl; Cooking = true;} // готовит котлету
