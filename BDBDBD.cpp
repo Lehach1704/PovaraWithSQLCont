@@ -10,19 +10,19 @@ using namespace std;
 CookerBD::CookerBD()
 {
     sqlite3 *CookerPtr;
-    int openBD = sqlite3_open("Povara.db", &CookerPtr);
+    int openBD = sqlite3_open("Povara.db", &CookerPtr); // открыли/создали Ѕƒ
     if (openBD != SQLITE_OK)
     {
         wcout << L"Open error in const" << endl;
     }
     else
     {
-        wcout << L"Open success in const" << endl;
+        wcout << L"Open success in constructor" << endl;
     }
 
     char *errmsg;
-    int createBD = sqlite3_exec(CookerPtr, "DROP TABLE IF EXISTS povara;"
-                                           "CREATE TABLE povara ("
+    int createBD = sqlite3_exec(CookerPtr, "DROP TABLE IF EXISTS povara;" //запрос на удаление, если уже имеетс€ таблица
+                                           "CREATE TABLE povara ("        //запрос на создание таблицы
                                            "Cooker INTEGER NOT NULL,"
                                            "Race INTEGER NOT NULL,"
                                            "ColorClothes INTEGER NOT NULL,"
@@ -49,7 +49,7 @@ CookerBD::~CookerBD()
         wcout << L"Success in destr" << endl;
     }*/
 
-    sqlite3_close(CookerPtr);
+    sqlite3_close(CookerPtr); // закрываем Ѕƒ
 }
 
 void CookerBD::AddCooker(CookerPtr newCooker)
@@ -67,7 +67,7 @@ void CookerBD::AddCooker(CookerPtr newCooker)
 
     char *errmsg;
     string reqest = "INSERT INTO povara (Cooker, Race, ColorClothes, Glasses) VALUES ('" + to_string(static_cast <int> (newCooker->GetCooker())) + "', '" + to_string(static_cast <int>(newCooker->GetRace())) + "', '" + to_string(static_cast <bool> (newCooker->ColClothes())) + "', '" + to_string(static_cast <bool> (newCooker->WearGlasses())) + "');";
-    int addCooker = sqlite3_exec(CookerPtr, reqest.c_str(), NULL, NULL, &errmsg);
+    int addCooker = sqlite3_exec(CookerPtr, reqest.c_str(), NULL, NULL, &errmsg); // запись в таблицу
 }
 
 int CookerBD::GetCount() const
@@ -86,17 +86,17 @@ int CookerBD::GetCount() const
     int schet = 0;
     sqlite3_stmt *forschet;
     string rec = "SELECT COUNT (*) FROM povara;";
-    int forgetCount = sqlite3_prepare_v2(CookerPtr, rec.c_str(), -1, &forschet, NULL);
+    int forgetCount = sqlite3_prepare_v2(CookerPtr, rec.c_str(), -1, &forschet, NULL); // вывод всего дл€ подсчета
 
     int countget = sqlite3_step(forschet);
     if (countget == SQLITE_ROW)
     {
-        schet = sqlite3_column_int64(forschet, 0);
+        schet = sqlite3_column_int64(forschet, 0); // подсчет общего количества
     }
     sqlite3_finalize(forschet);
 }
 
-bool ThirdContIterator::IsDone() const
+bool ThirdContIterator::IsDone() const // тоже самое, что и в функции GetCount, только возвращает позицию
 {
     sqlite3 *CookerPtr;
     int openBD = sqlite3_open("Povara.db", &CookerPtr);
@@ -138,7 +138,7 @@ CookerPtr ThirdContIterator::CurrentItem() const
 
     sqlite3_stmt *forschet1;
     string rc = "SELECT povara.Cooker, povara.Race, povara.ColorClothes, povara.Glasses, rowid FROM povara WHERE rowid =" + to_string(Position) + ";";
-    int forgetCount = sqlite3_prepare_v2(CookerPtr, rc.c_str(), -1, &forschet1, NULL);
+    int forgetCount = sqlite3_prepare_v2(CookerPtr, rc.c_str(), -1, &forschet1, NULL); // запрос на вывод конкретной строки
     /*if (forgetCount != SQLITE_OK)
     {
         wcout << L"Zapros na vivod" << endl;
@@ -148,7 +148,7 @@ CookerPtr ThirdContIterator::CurrentItem() const
         wcout << errmsg << endl;
     }*/
 
-    while(true)
+    while(true) // инициализаци€ повара через цикл
 	{
 
 		int stepResult = sqlite3_step(forschet1);
