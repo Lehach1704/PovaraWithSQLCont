@@ -35,11 +35,11 @@
 	<iostream>
 	"povara.h"
 
-1716556959 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\povarawithnewcont.cpp
+1717007034 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\povarawithnewcont.cpp
 	<iostream>
 	"povara.h"
 
-1716812041 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\povara.h
+1717041939 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\povara.h
 	<string>
 	<list>
 	"Patterns.h"
@@ -50,11 +50,10 @@
 1710242588 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\sqlite3.h
 	<stdarg.h>
 
-1716823012 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\main.cpp
+1717015419 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\main.cpp
 	<iostream>
 	<vector>
 	"povara.h"
-	"FunctionBD.h"
 	"sqlite3.h"
 
 1716824271 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\functionbd.h
@@ -125,4 +124,17 @@
 	<unicode/ubrk.h>
 	<unicode/utf16.h>
 	<math.h>
+
+1717006139 d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\bdbdbd.h
+	<string>
+	<iostream>
+	"povara.h"
+	"sqlite3.h"
+
+1717043706 source:d:\codeblocks\programs\secondsemestr\povarawithnewcont\povarawithsqlcont\bdbdbd.cpp
+	<string>
+	<iostream>
+	"povara.h"
+	"Patterns.h"
+	"sqlite3.h"
 

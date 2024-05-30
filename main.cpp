@@ -4,7 +4,6 @@
 using namespace std;
 
 #include "povara.h"
-#include "FunctionBD.h"
 #include "sqlite3.h"
 
 ActionOfCooker::ActionOfCooker()
@@ -153,7 +152,7 @@ void RCooker(Iterator<CookerPtr> *iter)
     }
 }
 
-ActionOfCooker *CreateCookerType(const Cooker type) //фабричный метод
+ActionOfCooker *CreateCookerType(const Cooker type, RaceCooker Race, bool ColorOfClothes, bool WearingGlasses) //фабричный метод
 {
     switch(type)
     {
@@ -165,9 +164,9 @@ ActionOfCooker *CreateCookerType(const Cooker type) //фабричный мет�
     }
 }
 
-ActionOfCooker *ActionOfCooker::CreateCooker(Cooker type)
+ActionOfCooker *ActionOfCooker::CreateCooker(Cooker type,RaceCooker Race, bool ColorOfClothes, bool WearingGlasses)
 {
-    return CreateCookerType(type);
+    return CreateCookerType(type, Race, ColorOfClothes, WearingGlasses);
 }
 
 int main()
@@ -182,28 +181,14 @@ int main()
 
     for(int i=0; i<a; i++)
     {
-        cookerBox.AddCooker(CreateCookerType(Cooker(rand() % 4)));
+        cookerBox.AddCooker(CreateCookerType(Cooker(rand() % 4),RaceCooker(), bool(), bool()));
     }
-
-    /*for(int i=0; i<=(a/10); i++)
-    {
-        cookerBox.AddCooker(new Cat());
-    }
-
-    for(int i=0; i<=10; i++)
-    {
-        cookerBox.AddCooker(new Robot());
-    }
-
-    for(int i=0; i<=(a/50); i++)
-    {
-        cookerBox.AddCooker(new WheelchairUser());
-    }*/
 
     //Iterator<CookerPtr> *iter = cookerBox.GetIterator();
 
     //Iterator<CookerPtr> *iter = new FirstDecorator(cookerBox.GetIterator(), true);
     //HaveGlasses(iter);
+    //Iterator<CookerPtr> *iter = new SecondDecorator(cookerBox.GetIterator(), true);
     //ColorCloth(iter);
 
     Iterator<CookerPtr> *iter = new ThirdDecorator( new FirstDecorator(cookerBox.GetIterator(), true),RaceCooker::European);

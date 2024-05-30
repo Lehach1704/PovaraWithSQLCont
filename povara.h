@@ -33,6 +33,7 @@ protected:
      string Post;
      bool WearingGlasses;
      bool ColorOfClothes;
+     Cooker Type;
      RaceCooker Race;
      ActionOfCooker();
 public:
@@ -47,7 +48,7 @@ public:
     virtual void VacOff() = 0; // вернуть из отпуска
     virtual Cooker GetCooker() const = 0; // определение повара
     virtual RaceCooker GetRace() {return Race;}
-    static ActionOfCooker *CreateCooker(Cooker type);
+    static ActionOfCooker *CreateCooker(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses);
 };
 
 typedef ActionOfCooker * CookerPtr;
@@ -61,6 +62,7 @@ private:
     string Post;
 public:
     int Skill;
+    Mouse(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker() {Type=type; Race = race; ColorOfClothes = colorOfClothes; WearingGlasses = wearingGlasses;}
     Mouse();
     virtual ~Mouse() {};
     void CookON() {wcout << L"Ушел готовить пасту" << endl; Cooking = true;} // готовит пасту
@@ -80,6 +82,7 @@ private:
     string Post;
 public:
     int Skill;
+    Cat(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker() {Type=type; Race = race; ColorOfClothes = colorOfClothes; WearingGlasses = wearingGlasses;}
     Cat();
     virtual ~Cat() {};
     void CookON() {wcout << L"Ушел готовить суши" << endl; Cooking = true;} // готовит суши
@@ -99,6 +102,7 @@ private:
     string Post;
 public:
     int Skill;
+    Robot(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker() {Type=type; Race = race; ColorOfClothes = colorOfClothes; WearingGlasses = wearingGlasses;}
     Robot();
     virtual ~Robot() {};
     void CookON() {wcout << L"Ушел готовить десерт" << endl; Cooking = true;} // готовит карамель
@@ -118,6 +122,7 @@ private:
     string Post;
 public:
     int Skill;
+    WheelchairUser(Cooker type, RaceCooker race, bool colorOfClothes, bool wearingGlasses): ActionOfCooker() {Type=type; Race = race; ColorOfClothes = colorOfClothes; WearingGlasses = wearingGlasses;}
     WheelchairUser();
     virtual ~WheelchairUser() {};
     void CookON() {wcout << L"Ушла готовить котлету" << endl; Cooking = true;} // готовит котлету
@@ -172,7 +177,7 @@ class ThirdContIterator : public Iterator<CookerPtr>
 {
 private:
 	sqlite3 *CookerBox;
-	int Position = 0;
+	int Position = 1;
 public:
 	ThirdContIterator(sqlite3 *cookerBox)
 	{

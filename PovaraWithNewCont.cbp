@@ -32,7 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="FunctionBD.h" />
+		<Unit filename="BDBDBD.cpp" />
 		<Unit filename="Patterns.h" />
 		<Unit filename="PovaraWithNewCont.cpp" />
 		<Unit filename="main.cpp" />
